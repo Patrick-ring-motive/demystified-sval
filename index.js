@@ -1,6 +1,6 @@
 !(function(sent$e, sent$t) {
   "object" == typeof exports && "undefined" != typeof module ? module.exports = sent$t() : "function" == typeof define && define.amd ? define(sent$t) : (sent$e = "undefined" != typeof globalThis ? globalThis : sent$e || self).Sval = sent$t();
-})(this, function() {
+})(this, function $this() {
   "use strict";
   var ObjectFreeze$D = Object.freeze({
       __proto__: null,
@@ -222,12 +222,12 @@
         throw: sent$t(1),
         return: sent$t(2)
       };
-    return ("function" == typeof Symbol && (sent$e[Symbol.iterator] = function() {
+    return ("function" == typeof Symbol && (sent$e[Symbol.iterator] = function $iterator() {
       return this;
     }), sent$e);
 
     function sent$t(sent$r) {
-      return function(sent$e) {
+      return function $return(sent$e) {
         var sent$t = [sent$r, sent$e];
         if (sent$s) throw new TypeError("Generator is already executing.");
         for (; sent$c;) try {
@@ -292,7 +292,7 @@
   }
 
   function apply$j() {
-    for (var sent$e = [], sent$t = 0; sent$t < arguments.length; sent$t++) sent$e = sent$e.concat((function(sent$e, sent$t) {
+    for (var sent$e = [], sent$t = 0; sent$t < arguments.length; sent$t++) sent$e = sent$e.concat((function $concat(sent$e, sent$t) {
       var sent$r = "function" == typeof Symbol && sent$e[Symbol.iterator];
       if (!sent$r) return sent$e;
       var sent$i, sent$n, sent$s = sent$r.call(sent$e),
@@ -364,18 +364,18 @@
     void 0 === sent$r && (sent$r = []);
     var sent$i = !1;
     try {
-      sent$i = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {}));
+      sent$i = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function $Boolean() {}));
     } catch (sent$e) {}
     return sent$i ? Reflect.construct(sent$t, sent$r, getPrototypeOf$Q(sent$e).constructor) : sent$t.apply(sent$e, sent$r);
   }
 
   function window$global$re(sent$e) {
     if (!sent$e.Object) throw 0;
-    ObjectCreate$$$ie = ObjectGetOwnPropertyNames$H(sent$i = sent$e).filter(function(sent$e) {
+    ObjectCreate$$$ie = ObjectGetOwnPropertyNames$H(sent$i = sent$e).filter(function $filter(sent$e) {
       return -1 === ["webkitStorageInfo", "GLOBAL", "root"].indexOf(sent$e);
     });
   }
-  var find$m = Object.assign || (function(sent$e) {
+  var find$m = Object.assign || (function $assign(sent$e) {
       for (var sent$t = 1; sent$t < arguments.length; ++sent$t) {
         var sent$r, sent$i = arguments[sent$t];
         for (sent$r in sent$i) imported$G(sent$i, sent$r) && (sent$e[sent$r] = sent$i[sent$r]);
@@ -816,10 +816,10 @@
     sent$e = Object.prototype,
     Object$hasOwn$we = sent$e.hasOwnProperty,
     isArray$Se = sent$e.toString,
-    ObjectHasOwn$ke = Object.hasOwn || (function(sent$e, sent$t) {
+    ObjectHasOwn$ke = Object.hasOwn || (function $hasOwn(sent$e, sent$t) {
       return Object$hasOwn$we.call(sent$e, sent$t);
     }),
-    ArrayIsArray$_e = Array.isArray || (function(sent$e) {
+    ArrayIsArray$_e = Array.isArray || (function $isArray(sent$e) {
       return "[object Array]" === isArray$Se.call(sent$e);
     }),
     ObjectCreate$Ee = Object.create(null);
@@ -878,7 +878,7 @@
     for (sent$t in preserveParens$Te) sent$i[sent$t] = (sent$e && ObjectHasOwn$ke(sent$e, sent$t) ? sent$e : preserveParens$Te)[sent$t];
     return ("latest" === sent$i.ecmaVersion ? sent$i.ecmaVersion = 1e8 : null == sent$i.ecmaVersion ? (!preserveParens$Ve && "object" == typeof console && console.warn && (preserveParens$Ve = !0, console.warn("Since Acorn 8.0.0, options.ecmaVersion is required.\nDefaulting to 2020, but this will stop working in the future.")), sent$i.ecmaVersion = 11) : 2015 <= sent$i.ecmaVersion && (sent$i.ecmaVersion -= 2009), null == sent$i.allowReserved && (sent$i.allowReserved = sent$i.ecmaVersion < 5), sent$e && null != sent$e.allowHashBang || (sent$i.allowHashBang = 14 <= sent$i.ecmaVersion), ArrayIsArray$_e(sent$i.onToken) && (sent$r = sent$i.onToken, sent$i.onToken = function $onToken(sent$e) {
       return sent$r.push(sent$e);
-    }), ArrayIsArray$_e(sent$i.onComment) && (sent$i.onComment = (sent$o = (onlyBlock$a = sent$i).onComment, function(sent$e, sent$t, sent$r, sent$i, sent$n, sent$s) {
+    }), ArrayIsArray$_e(sent$i.onComment) && (sent$i.onComment = (sent$o = (onlyBlock$a = sent$i).onComment, function $onComment(sent$e, sent$t, sent$r, sent$i, sent$n, sent$s) {
       sent$e = {
         type: sent$e ? "Block" : "Line",
         value: sent$t,
@@ -1212,7 +1212,7 @@
       sent$s = !1;
     for ((sent$n.body = [], this.expect(expect$g.braceL)); this.type !== expect$g.braceR;) {
       var onlyBlock$a = this.parseClassElement(null !== sent$e.superClass);
-      onlyBlock$a && (sent$n.body.push(onlyBlock$a), "MethodDefinition" === onlyBlock$a.type && "constructor" === onlyBlock$a.kind ? (sent$s && this.raiseRecoverable(onlyBlock$a.start, "Duplicate constructor in the same class"), sent$s = !0) : onlyBlock$a.key && "PrivateIdentifier" === onlyBlock$a.key.type && (function(sent$e, sent$t) {
+      onlyBlock$a && (sent$n.body.push(onlyBlock$a), "MethodDefinition" === onlyBlock$a.type && "constructor" === onlyBlock$a.kind ? (sent$s && this.raiseRecoverable(onlyBlock$a.start, "Duplicate constructor in the same class"), sent$s = !0) : onlyBlock$a.key && "PrivateIdentifier" === onlyBlock$a.key.type && (function $type(sent$e, sent$t) {
         var sent$r = sent$t.key.name,
           sent$i = sent$e[sent$r],
           sent$n = "true";
@@ -2089,7 +2089,7 @@
     }
     15 <= this.options.ecmaVersion && sent$i && sent$n && this.raise(sent$e.start, "Invalid regular expression flag");
   }, sent$e.validateRegExpPattern = function $validateRegExpPattern(sent$e) {
-    (this.regexp_pattern(sent$e), !sent$e.switchN && 9 <= this.options.ecmaVersion && (function(sent$e) {
+    (this.regexp_pattern(sent$e), !sent$e.switchN && 9 <= this.options.ecmaVersion && (function $ecmaVersion(sent$e) {
       for (var sent$t in sent$e) return 1;
     })(sent$e.groupNames) && (sent$e.switchN = !0, this.regexp_pattern(sent$e)));
   }, sent$e.regexp_pattern = function $regexp_pattern(sent$e) {
@@ -2478,7 +2478,7 @@
     (!sent$e && this.type.keyword && this.containsEsc && this.raiseRecoverable(this.start, "Escape sequence in keyword " + this.type.keyword), this.options.onToken && this.options.onToken(new onToken$ut(this)), this.lastTokEnd = this.end, this.lastTokStart = this.start, this.lastTokEndLoc = this.endLoc, this.lastTokStartLoc = this.startLoc, this.nextToken());
   }, thisLastTokEndLoc$y.getToken = function $getToken() {
     return (this.next(), new onToken$ut(this));
-  }, "undefined" != typeof Symbol && (thisLastTokEndLoc$y[Symbol.iterator] = function() {
+  }, "undefined" != typeof Symbol && (thisLastTokEndLoc$y[Symbol.iterator] = function $iterator() {
     var sent$t = this;
     return {
       next: function $next() {
@@ -2939,7 +2939,7 @@
       sent$c = sent$e.err,
       sent$h = sent$e.ret,
       sent$l = sent$e.fullRet;
-    return new Promise(function(sent$t, sent$r) {
+    return new Promise(function $Promise(sent$t, sent$r) {
       if (("ret" in sent$e)) return sent$t(onlyBlock$a.return(sent$h));
 
       function sent$i(sent$e) {
@@ -2971,7 +2971,7 @@
 
   function sent$It(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       if ((onlyBlock$a = sent$i.getVar, onlyBlock$a = void 0 !== onlyBlock$a && onlyBlock$a, sent$n = sent$i.throwErr, sent$n = void 0 === sent$n || sent$n, "undefined" !== sent$t.name)) {
         if (sent$s = sent$r.find(sent$t.name)) {
           if (onlyBlock$a) return [2, sent$s];
@@ -2989,7 +2989,7 @@
   });
 
   function Identifier$Pt(sent$t, sent$e) {
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       return [2, sent$t.value];
     });
   }
@@ -3000,7 +3000,7 @@
 
   function sent$Tt(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h, sent$l, push$u;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$n = sent$i.getObj, sent$n = void 0 !== sent$n && sent$n, sent$s = sent$i.getVar, sent$s = void 0 !== sent$s && sent$s, "Super" !== sent$t.object.type ? [3, 2] : [5, sent$b(Super$Nt(sent$t.object, sent$r, {
@@ -3027,21 +3027,21 @@
   }
 
   function TemplateElement$Vt(sent$t, sent$e) {
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       return [2, sent$t.value.raw];
     });
   }
 
   function Super$Nt(sent$e, sent$t, sent$r) {
     var sent$i, sent$n;
-    return (void 0 === sent$r && (sent$r = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$r && (sent$r = {}), sent$v(this, function $this(sent$e) {
       return (sent$i = sent$r.getProto, sent$i = void 0 !== sent$i && sent$i, sent$n = sent$t.find(arguments$mt).get(), [2, sent$i ? sent$n.prototype : sent$n]);
     }));
   }
 
   function concat$Bt(sent$t, sent$r, sent$i) {
     var sent$n;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return [5, sent$b(sent$L(sent$t.argument, sent$r))];
@@ -3056,14 +3056,14 @@
     __proto__: null,
     ThisExpression: function $ThisExpression(sent$e, sent$t) {
       var sent$r;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         if ((sent$r = sent$t.find(find$yt)) && !0 !== sent$r.get()) throw new ReferenceError("Must call super constructor in derived class before accessing 'this' or returning from derived constructor");
         return [2, sent$t.find("this").get()];
       });
     },
     ArrayExpression: function $ArrayExpression(sent$t, sent$r) {
       var sent$i, sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             (sent$i = [], sent$n = 0, sent$e.label = 1);
@@ -3084,7 +3084,7 @@
     },
     ObjectExpression: function $ObjectExpression(sent$t, sent$r) {
       var sent$i, sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h, sent$l, push$u, LABEL$p, thisYieldPos$d;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             (sent$i = {}, sent$n = 0, sent$e.label = 1);
@@ -3127,13 +3127,13 @@
     },
     FunctionExpression: function $FunctionExpression(sent$t, sent$r) {
       var sent$i, sent$n;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         return sent$t.id && sent$t.id.name ? (sent$i = new FunctionExpression$P(sent$r), sent$n = FunctionExpression$R(sent$t, sent$i), sent$i.const(sent$t.id.name, sent$n), [2, sent$n]) : [2, FunctionExpression$R(sent$t, sent$r)];
       });
     },
     UnaryExpression: function $UnaryExpression(sent$t, sent$r) {
       var sent$i;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             switch ((sent$i = sent$t.argument, sent$t.operator)) {
@@ -3203,7 +3203,7 @@
     },
     UpdateExpression: function $UpdateExpression(sent$t, sent$r) {
       var sent$i, sent$n, sent$s;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return "Identifier" !== (sent$i = sent$t.argument).type ? [3, 2] : [5, sent$b(sent$It(sent$i, sent$r, {
@@ -3228,7 +3228,7 @@
     },
     BinaryExpression: function $BinaryExpression(sent$t, sent$r) {
       var sent$i, sent$n;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return "PrivateIdentifier" !== sent$t.left.type ? [3, 2] : (sent$i = sent$t.left.name, [5, sent$b(sent$L(sent$t.right, sent$r))]);
@@ -3294,7 +3294,7 @@
     },
     AssignmentExpression: function $AssignmentExpression(sent$t, sent$r) {
       var sent$i, sent$n, sent$s, onlyBlock$a, sent$o;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return "Identifier" !== (sent$i = sent$t.left).type ? [3, 2] : [5, sent$b(sent$It(sent$i, sent$r, {
@@ -3361,7 +3361,7 @@
     },
     LogicalExpression: function $LogicalExpression(sent$t, sent$r) {
       var sent$i, sent$n, sent$s, onlyBlock$a;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             switch (sent$t.operator) {
@@ -3407,7 +3407,7 @@
     MemberExpression: sent$Tt,
     ConditionalExpression: function $ConditionalExpression(sent$t, sent$r) {
       var sent$i;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return [5, sent$b(sent$L(sent$t.test, sent$r))];
@@ -3426,7 +3426,7 @@
     },
     CallExpression: function $CallExpression(sent$t, sent$r) {
       var sent$i, sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h, sent$l, push$u, LABEL$p, thisYieldPos$d, ObjectGetOwnPropertyDescriptor$q$f, find$m, thisLastTokEndLoc$y, expect$g;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return "MemberExpression" !== sent$t.callee.type ? [3, 5] : [5, sent$b(sent$Tt(sent$t.callee, sent$r, {
@@ -3488,7 +3488,7 @@
     },
     NewExpression: function $NewExpression(sent$t, sent$r) {
       var sent$i, sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h, sent$l, push$u;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return [5, sent$b(sent$L(sent$t.callee, sent$r))];
@@ -3520,7 +3520,7 @@
       });
     },
     MetaProperty: function $MetaProperty(sent$t, sent$r) {
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         return "new" === sent$t.meta.name && "target" === sent$t.property.name ? [2, sent$r.find(arguments$bt).get()] : "import" === sent$t.meta.name && "meta" === sent$t.property.name ? [2, {
           url: ""
         }] : [2];
@@ -3528,7 +3528,7 @@
     },
     SequenceExpression: function $SequenceExpression(sent$t, sent$r) {
       var sent$i, sent$n;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             (sent$n = 0, sent$e.label = 1);
@@ -3544,13 +3544,13 @@
       });
     },
     ArrowFunctionExpression: function $ArrowFunctionExpression(sent$t, sent$r) {
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         return [2, FunctionExpression$R(sent$t, sent$r)];
       });
     },
     TemplateLiteral: function $TemplateLiteral(sent$t, sent$r) {
       var sent$i, sent$n, sent$s, onlyBlock$a, sent$o, sent$c;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             (sent$i = sent$t.quasis.slice(), sent$n = sent$t.expressions.slice(), sent$s = "", sent$e.label = 1);
@@ -3569,14 +3569,14 @@
     },
     TaggedTemplateExpression: function $TaggedTemplateExpression(sent$t, sent$r) {
       var sent$i, sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return [5, sent$b(sent$L(sent$t.tag, sent$r))];
           case 1:
-            if ((sent$i = sent$e.sent(), sent$s = sent$t.quasi.quasis, sent$n = sent$s.map(function(sent$e) {
+            if ((sent$i = sent$e.sent(), sent$s = sent$t.quasi.quasis, sent$n = sent$s.map(function $map(sent$e) {
                 return sent$e.value.cooked;
-              }), sent$s = sent$s.map(function(sent$e) {
+              }), sent$s = sent$s.map(function $map(sent$e) {
                 return sent$e.value.raw;
               }), ObjectGetOwnPropertyDescriptor$q$f(sent$n, "raw", {
                 value: ObjectFreeze$U(sent$s)
@@ -3596,7 +3596,7 @@
     TemplateElement: TemplateElement$Vt,
     ClassExpression: function $ClassExpression(sent$t, sent$r) {
       var sent$i, sent$n;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return sent$t.id && sent$t.id.name ? (sent$i = new FunctionExpression$P(sent$r), [5, sent$b(declaration$bi(sent$t, sent$i))]) : [3, 2];
@@ -3612,7 +3612,7 @@
     Super: Super$Nt,
     SpreadElement: concat$Bt,
     ChainExpression: function $ChainExpression(sent$t, sent$r) {
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return [5, sent$b(sent$L(sent$t.expression, sent$r))];
@@ -3623,7 +3623,7 @@
     },
     ImportExpression: function $ImportExpression(sent$t, sent$r) {
       var sent$i, sent$n, sent$s, onlyBlock$a;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return (sent$i = sent$r.global(), [5, sent$b(sent$L(sent$t.source, sent$r))]);
@@ -3634,7 +3634,7 @@
     },
     YieldExpression: function $YieldExpression(sent$t, sent$r) {
       var sent$i, sent$n;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return [5, sent$b(sent$L(sent$t.argument, sent$r))];
@@ -3653,7 +3653,7 @@
     },
     AwaitExpression: function $AwaitExpression(sent$t, sent$r) {
       var sent$i;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return (sent$i = done$next$ft, [5, sent$b(sent$L(sent$t.argument, sent$r))]);
@@ -3668,7 +3668,7 @@
 
   function ObjectPattern$Dt(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h, sent$l, push$u, LABEL$p, thisYieldPos$d, ObjectGetOwnPropertyDescriptor$q$f;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           (sent$n = sent$i.kind, sent$n = void 0 === sent$n ? "var" : sent$n, sent$s = sent$i.hoist, sent$s = void 0 !== sent$s && sent$s, onlyBlock$a = sent$i.onlyBlock, onlyBlock$a = void 0 !== onlyBlock$a && onlyBlock$a, sent$o = sent$i.feed, sent$o = void 0 === sent$o ? {} : sent$o, sent$c = [], sent$h = 0, sent$e.label = 1);
@@ -3729,7 +3729,7 @@
 
   function sent$Ot(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h, sent$l, push$u;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           (sent$n = sent$i.kind, sent$s = sent$i.hoist, sent$s = void 0 !== sent$s && sent$s, onlyBlock$a = sent$i.onlyBlock, onlyBlock$a = void 0 !== onlyBlock$a && onlyBlock$a, sent$o = sent$i.feed, sent$o = void 0 === sent$o ? [] : sent$o, sent$c = [], sent$h = 0, sent$e.label = 1);
@@ -3786,7 +3786,7 @@
 
   function sent$Mt(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o, sent$c;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           if ((sent$n = sent$i.kind, sent$s = sent$i.hoist, sent$s = void 0 !== sent$s && sent$s, onlyBlock$a = sent$i.onlyBlock, onlyBlock$a = void 0 !== onlyBlock$a && onlyBlock$a, sent$o = sent$i.feed, sent$o = void 0 === sent$o ? [] : sent$o, sent$c = sent$t.argument, !sent$s)) return [3, 4];
@@ -3830,7 +3830,7 @@
 
   function sent$Ft(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h, sent$l;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$n = sent$i.kind, sent$n = void 0 === sent$n ? "var" : sent$n, sent$s = sent$i.hoist, sent$s = void 0 !== sent$s && sent$s, onlyBlock$a = sent$i.onlyBlock, onlyBlock$a = void 0 !== onlyBlock$a && onlyBlock$a, void 0 !== (sent$o = sent$i.feed) ? [3, 2] : [5, sent$b(sent$L(sent$t.right, sent$r))]);
@@ -3880,7 +3880,7 @@
     __proto__: null,
     Program: function $Program(sent$t, sent$r) {
       var sent$i;
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             (sent$i = 0, sent$e.label = 1);
@@ -3899,7 +3899,7 @@
 
   function sent$L(sent$t, sent$r) {
     var sent$i;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return sent$t ? (sent$Ut = sent$Ut || find$m({}, ObjectFreeze$O, ObjectFreeze$Rt, ObjectFreeze$At, ObjectFreeze$D, ObjectFreeze$Lt, ObjectFreeze$jt, ObjectFreeze$qt), (sent$i = sent$Ut[sent$t.type]) ? [5, sent$b(sent$i(sent$t, sent$r))] : [3, 2]) : [2];
@@ -3912,7 +3912,7 @@
   }
 
   function ExpressionStatement$Wt(sent$t, sent$r) {
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return [5, sent$b(sent$L(sent$t.expression, sent$r))];
@@ -3924,7 +3924,7 @@
 
   function body$Gt(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$n = sent$i.invasived, sent$n = void 0 !== sent$n && sent$n, onlyBlock$a = sent$i.hoisted, onlyBlock$a = void 0 !== onlyBlock$a && onlyBlock$a, sent$n = sent$n ? sent$r : new FunctionExpression$P(sent$r), onlyBlock$a ? [3, 2] : [5, sent$b(body$vi(sent$t, sent$n, {
@@ -3949,13 +3949,13 @@
   }
 
   function EmptyStatement$Ht() {
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       return [2];
     });
   }
 
   function DebuggerStatement$zt() {
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       debugger;
       return [2];
     });
@@ -3963,7 +3963,7 @@
 
   function ReturnStatement$Kt(sent$t, sent$r) {
     var sent$i, sent$n;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$i = LABEL$S, sent$t.argument) ? [5, sent$b(sent$L(sent$t.argument, sent$r))] : [3, 2];
@@ -3979,21 +3979,21 @@
 
   function BreakStatement$Qt(sent$t) {
     var sent$r;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       return (sent$_.LABEL = null == (sent$r = sent$t.label) ? void 0 : sent$r.name, [2, sent$_]);
     });
   }
 
   function ContinueStatement$Xt(sent$t) {
     var sent$r;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       return (LABEL$k.LABEL = null == (sent$r = sent$t.label) ? void 0 : sent$r.name, [2, LABEL$k]);
     });
   }
 
   function LabeledStatement$Yt(sent$t, sent$r) {
     var sent$i;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$i = sent$t.label.name, "WhileStatement" !== sent$t.body.type ? [3, 2] : [5, sent$b(WhileStatement$nr(sent$t.body, sent$r, {
@@ -4063,7 +4063,7 @@
 
   function body$Zt(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$n = new FunctionExpression$P(sent$r), onlyBlock$a = (sent$s = sent$n).with, [5, sent$b(sent$L(sent$t.object, sent$r))]);
@@ -4077,7 +4077,7 @@
 
   function IfStatement$Jt(sent$t, sent$r, sent$i) {
     var sent$n;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return [5, sent$b(sent$L(sent$t.test, sent$r))];
@@ -4097,7 +4097,7 @@
 
   function SwitchStatement$$t(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h, sent$l;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return [5, sent$b(sent$L(sent$t.discriminant, sent$r))];
@@ -4125,7 +4125,7 @@
 
   function SwitchCase$er(sent$t, sent$r) {
     var sent$i, sent$n;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           (sent$i = 0, sent$e.label = 1);
@@ -4143,7 +4143,7 @@
   }
 
   function ThrowStatement$tr(sent$t, sent$r) {
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return [5, sent$b(sent$L(sent$t.argument, sent$r))];
@@ -4155,7 +4155,7 @@
 
   function TryStatement$rr(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o, sent$c;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$e.trys.push([0, 2, 9, 12]), [5, sent$b(body$Gt(sent$t.block, sent$r))]);
@@ -4195,7 +4195,7 @@
   }
 
   function CatchClause$ir(sent$t, sent$r) {
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return [5, sent$b(body$Gt(sent$t.body, sent$r, {
@@ -4209,7 +4209,7 @@
 
   function WhileStatement$nr(sent$t, sent$r, sent$i) {
     var sent$n;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return [5, sent$b(sent$L(sent$t.test, sent$r))];
@@ -4225,7 +4225,7 @@
 
   function DoWhileStatement$sr(sent$t, sent$r, sent$i) {
     var sent$n;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return [5, sent$b(sent$L(sent$t.body, sent$r))];
@@ -4247,7 +4247,7 @@
 
   function ForStatement$ar(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$n = new FunctionExpression$P(sent$r), [5, sent$b(sent$L(sent$t.init, sent$n))]);
@@ -4286,7 +4286,7 @@
 
   function ForInStatement$or(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$n = [], [5, sent$b(sent$L(sent$t.right, sent$r))]);
@@ -4312,7 +4312,7 @@
 
   function ForOfStatement$cr(sent$n, sent$s, onlyBlock$a) {
     var sent$o, sent$c, sent$h, sent$l, push$u, LABEL$p, thisYieldPos$d, ObjectGetOwnPropertyDescriptor$q$f, find$m;
-    return (void 0 === onlyBlock$a && (onlyBlock$a = {}), sent$v(this, function(sent$e) {
+    return (void 0 === onlyBlock$a && (onlyBlock$a = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return [5, sent$b(sent$L(sent$n.right, sent$s))];
@@ -4376,14 +4376,14 @@
   }
 
   function FunctionDeclaration$hr(sent$t, sent$r) {
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       return (sent$r.func(sent$t.id.name, FunctionExpression$R(sent$t, sent$r)), [2]);
     });
   }
 
   function left$lr(sent$t, sent$r, sent$i) {
     var sent$n;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           (sent$n = 0, sent$e.label = 1);
@@ -4403,7 +4403,7 @@
 
   function VariableDeclarator$ur(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h, sent$l, push$u;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           if ((sent$n = sent$i.kind, sent$n = void 0 === sent$n ? "var" : sent$n, sent$s = sent$i.hoist, sent$s = void 0 !== sent$s && sent$s, onlyBlock$a = sent$i.onlyBlock, onlyBlock$a = void 0 !== onlyBlock$a && onlyBlock$a, sent$o = sent$i.feed, !sent$s)) return [3, 4];
@@ -4448,7 +4448,7 @@
 
   function ClassDeclaration$pr(sent$t, sent$r) {
     var sent$i, sent$n, sent$s;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$n = (sent$i = sent$r).func, sent$s = [sent$t.id.name], [5, sent$b(declaration$bi(sent$t, sent$r))]);
@@ -4460,7 +4460,7 @@
 
   function ClassBody$dr(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           (sent$n = sent$i.klass, sent$s = sent$i.superClass, onlyBlock$a = 0, sent$e.label = 1);
@@ -4495,7 +4495,7 @@
 
   function MethodDefinition$fr(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h, sent$l;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$n = sent$i.klass, sent$s = sent$i.superClass, sent$o = !1, sent$t.computed) ? [5, sent$b(sent$L(sent$t.key, sent$r))] : [3, 2];
@@ -4547,7 +4547,7 @@
 
   function static$mr(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h, sent$l, push$u;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$n = sent$i.klass, sent$s = sent$i.superClass, sent$o = !1, sent$t.computed) ? [5, sent$b(sent$L(sent$t.key, sent$r))] : [3, 2];
@@ -4580,7 +4580,7 @@
 
   function sent$yr(sent$t, sent$r, sent$i) {
     var sent$n, sent$s;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$n = sent$i.klass, (sent$s = new FunctionExpression$P(sent$r, !0)).const("this", sent$n), [5, sent$b(body$Gt(sent$t, sent$s, {
@@ -4594,7 +4594,7 @@
 
   function ImportDeclaration$gr(sent$t, sent$r) {
     var sent$i, sent$n, sent$s, onlyBlock$a, sent$o;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       if ((sent$n = sent$r.global(), (sent$n = sent$n.find(find$xt + sent$t.source.value)) && (sent$n = sent$n.get()) && ("function" == typeof sent$n ? sent$i = sent$n() : "object" == typeof sent$n && (sent$i = sent$n)), !sent$i || "object" != typeof sent$i)) throw new TypeError('Failed to resolve module specifier "' + sent$t.source.value + '"');
       for (sent$s = 0; sent$s < sent$t.specifiers.length; sent$s++) {
         if ((onlyBlock$a = sent$t.specifiers[sent$s], sent$o = void 0, "ImportSpecifier" === onlyBlock$a.type ? sent$o = "Identifier" === onlyBlock$a.imported.type ? onlyBlock$a.imported.name : onlyBlock$a.imported.value : "ImportDefaultSpecifier" === onlyBlock$a.type ? sent$o = "default" : "ImportNamespaceSpecifier" === onlyBlock$a.type && (sent$o = "*"), "*" !== sent$o && !imported$G(sent$i, sent$o))) throw new SyntaxError('The requested module "' + sent$t.source.value + '" does not provide an export named "' + sent$o + '"');
@@ -4606,7 +4606,7 @@
 
   function ExportDefaultDeclaration$vr(sent$t, sent$r) {
     var sent$i, sent$n, sent$s;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$i = sent$r.global(), "FunctionDeclaration" !== sent$t.declaration.type) ? [3, 1] : (sent$n = FunctionExpression$R(sent$t.declaration, sent$r), sent$r.func(sent$t.declaration.id.name, sent$n), [3, 5]);
@@ -4626,7 +4626,7 @@
 
   function ExportNamedDeclaration$br(sent$t, sent$r) {
     var sent$i, sent$n, sent$s, onlyBlock$a, sent$o, sent$c, sent$h, sent$l, push$u, LABEL$p, thisYieldPos$d;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$i = sent$r.global(), sent$t.declaration) ? "FunctionDeclaration" !== sent$t.declaration.type ? [3, 1] : (sent$n = FunctionExpression$R(sent$t.declaration, sent$r), sent$r.func(sent$t.declaration.id.name, sent$n), (sent$c = sent$i.find(find$A)) && (sent$s = sent$c.get()) && "object" == typeof sent$s && (sent$s[sent$t.declaration.id.name] = sent$n), [3, 5]) : [3, 6];
@@ -4654,7 +4654,7 @@
 
   function ExportAllDeclaration$xr(sent$t, sent$r) {
     var sent$i, sent$n, sent$s;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       if ((sent$s = sent$r.global(), (sent$n = sent$s.find(find$xt + sent$t.source.value)) && (sent$n = sent$n.get()) && ("function" == typeof sent$n ? sent$i = sent$n() : "object" == typeof sent$n && (sent$i = sent$n)), sent$i && "object" == typeof sent$i)) return ((sent$n = sent$s.find(find$A)) && (sent$s = sent$n.get()) && "object" == typeof sent$s && find$m(sent$s, sent$i), [2]);
       throw new TypeError('Failed to resolve module specifier "' + sent$t.source.value + '"');
     });
@@ -5004,10 +5004,10 @@
     },
     TaggedTemplateExpression: function $TaggedTemplateExpression(sent$e, sent$t) {
       var sent$r = computed$T(sent$e.tag, sent$t),
-        sent$i = (sent$n = sent$e.quasi.quasis).map(function(sent$e) {
+        sent$i = (sent$n = sent$e.quasi.quasis).map(function $map(sent$e) {
           return sent$e.value.cooked;
         }),
-        sent$n = sent$n.map(function(sent$e) {
+        sent$n = sent$n.map(function $map(sent$e) {
           return sent$e.value.raw;
         }),
         sent$s = (ObjectGetOwnPropertyDescriptor$q$f(sent$i, "raw", {
@@ -5704,7 +5704,7 @@
 
   function body$vi(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o, sent$c;
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           (sent$n = sent$i.onlyBlock, sent$n = void 0 !== sent$n && sent$n, sent$s = [], onlyBlock$a = [], sent$c = 0, sent$e.label = 1);
@@ -5720,7 +5720,7 @@
         case 4:
           return sent$n ? [3, 6] : [5, sent$b((function sent$t(sent$r, sent$i) {
             var sent$n, sent$s, onlyBlock$a, sent$o, sent$c;
-            return sent$v(this, function(sent$e) {
+            return sent$v(this, function $this(sent$e) {
               switch (sent$e.label) {
                 case 0:
                   switch (sent$r.type) {
@@ -5847,7 +5847,7 @@
   }
 
   function sent$B(sent$t, sent$r, sent$i) {
-    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function(sent$e) {
+    return (void 0 === sent$i && (sent$i = {}), sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           switch (sent$t.type) {
@@ -5887,7 +5887,7 @@
     var sent$t, sent$l, push$u, LABEL$p, sent$s, sent$r, sent$i;
     return (void 0 === sent$e && (sent$e = {}), sent$c.generator || sent$c.async ? (sent$l = sent$e.superClass, push$u = sent$e.construct, LABEL$p = sent$c.params, sent$s = function sent$e() {
       for (var sent$t, sent$r, sent$i, sent$n, sent$s = this && this instanceof sent$e ? this.constructor : void 0, onlyBlock$a = [], sent$o = 0; sent$o < arguments.length; sent$o++) onlyBlock$a[sent$o] = arguments[sent$o];
-      return sent$v(this, function(sent$e) {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             if ((sent$t = new FunctionExpression$P(sent$h, !0), "ArrowFunctionExpression" !== sent$c.type)) {
@@ -5936,13 +5936,13 @@
             return sent$n === LABEL$S ? [2, sent$n.RES] : sent$s ? [2, sent$t.find("this").get()] : [2];
         }
       });
-    }, sent$r = sent$c.async && sent$c.generator ? function() {
+    }, sent$r = sent$c.async && sent$c.generator ? function $generator() {
       function sent$t(sent$e) {
-        return sent$i = sent$i.then(function() {
+        return sent$i = sent$i.then(function $then() {
           return ecmaVersion$Ct(sent$r, find$m({
             fullRet: !0
           }, sent$e));
-        }).catch(function(sent$e) {
+        }).catch(function $catch(sent$e) {
           if (!sent$n) return (sent$n = !0, Promise.reject(sent$e));
         });
       }
@@ -5966,10 +5966,10 @@
             });
           }
         };
-      return ("function" == typeof Symbol && (sent$e[Symbol.iterator] = function() {
+      return ("function" == typeof Symbol && (sent$e[Symbol.iterator] = function $iterator() {
         return this;
       }), sent$e);
-    } : sent$c.async ? function() {
+    } : sent$c.async ? function $async() {
       return ecmaVersion$Ct(sent$s.apply(this, arguments));
     } : sent$s, ObjectGetOwnPropertyDescriptor$q$f(sent$r, TypeError$gt, {
       value: !0
@@ -5989,14 +5989,14 @@
 
   function declaration$bi(sent$t, sent$n) {
     var sent$s, onlyBlock$a, sent$r, sent$i, sent$o, sent$c;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return [5, sent$b(sent$L(sent$t.superClass, sent$n))];
         case 1:
           for ((sent$s = sent$e.sent(), onlyBlock$a = sent$t.body.body, sent$r = function $sent$r(sent$t) {
               var sent$r, sent$i;
-              return sent$v(this, function(sent$e) {
+              return sent$v(this, function $this(sent$e) {
                 switch (sent$e.label) {
                   case 0:
                     (sent$r = 0, sent$e.label = 1);
@@ -6015,7 +6015,7 @@
               });
             }, sent$i = function $sent$i() {
               var sent$t;
-              return sent$v(this, function(sent$e) {
+              return sent$v(this, function $this(sent$e) {
                 switch (sent$e.label) {
                   case 0:
                     return (sent$t = sent$s ? ReferenceError$te(this, sent$s) : this, [5, sent$b(sent$r(sent$t))]);
@@ -6048,7 +6048,7 @@
 
   function done$xi(sent$t, sent$r, sent$i) {
     var sent$n, sent$s, onlyBlock$a, sent$o;
-    return sent$v(this, function(sent$e) {
+    return sent$v(this, function $this(sent$e) {
       switch (sent$e.label) {
         case 0:
           return (sent$n = sent$i.value, sent$s = sent$t.left, onlyBlock$a = new FunctionExpression$P(sent$r), "VariableDeclaration" !== sent$s.type ? [3, 2] : [5, sent$b(left$lr(sent$s, onlyBlock$a, {
@@ -6110,8 +6110,8 @@
   }, sent$wi.prototype.run = function $run(sent$e) {
     var sent$t = "string" == typeof sent$e ? this.parse(sent$e) : sent$e,
       sent$r = this.scope;
-    "module" === this.options.sourceType && ("latest" === this.options.ecmaVersion || 13 <= this.options.ecmaVersion) ? ecmaVersion$Ct((function() {
-      return sent$v(this, function(sent$e) {
+    "module" === this.options.sourceType && ("latest" === this.options.ecmaVersion || 13 <= this.options.ecmaVersion) ? ecmaVersion$Ct((function $ecmaVersion$Ct() {
+      return sent$v(this, function $this(sent$e) {
         switch (sent$e.label) {
           case 0:
             return [5, sent$b(body$vi(sent$t, sent$r))];
